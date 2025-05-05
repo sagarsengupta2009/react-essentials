@@ -1,25 +1,14 @@
-import { CORE_CONCEPTS } from "./data.js";
 import Header from "./components/Header.jsx";
-import CoreConcept from "./components/CoreConcept.jsx";
+import CoreConcepts from "./components/CoreConcepts.jsx";
+import Examples from "./components/Examples.jsx";
 
 function App() {
   return (
     <div>
       <Header />
       <main>
-        <section id="core-concepts">
-          <h2>Core Concept</h2>
-          <ul>
-            <CoreConcept {...CORE_CONCEPTS[0]} />
-            <CoreConcept
-              title={CORE_CONCEPTS[1].title}
-              description={CORE_CONCEPTS[1].description}
-              image={CORE_CONCEPTS[1].image}
-            />
-            <CoreConcept {...CORE_CONCEPTS[2]} />
-            <CoreConcept {...CORE_CONCEPTS[3]} />
-          </ul>
-        </section>
+        <CoreConcepts />
+        <Examples />
       </main>
     </div>
   );
